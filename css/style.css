@@ -1,0 +1,818 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #000000;
+
+    /* 英数字はInter、日本語はNoto Sans JPを優先 */
+    font-family:
+        "Inter",
+        "Noto Sans JP",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/* =========================
+   英字見出し
+========================= */
+
+/* Jomolhariを適用し、字間を5%広げる */
+.section-title,
+.menu-category h3 {
+    font-family:
+        "Jomolhari",
+        "Noto Serif JP",
+        "Yu Mincho",
+        serif;
+
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    width: 100%;
+    height: 100px;
+
+    /* スクロールしても上部に固定 */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #f2f2f2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 2%;
+}
+
+/* 左側のナビゲーション */
+.header-nav {
+    position: absolute;
+    left: 2%;
+
+    display: flex;
+    gap: 30px;
+}
+
+.header-nav a {
+    font-family: "Jomolhari", "Noto Serif JP", serif;
+    letter-spacing: 0.05em;
+    font-size: 17px;
+
+    transition: opacity 0.3s;
+}
+
+.header-nav a:hover {
+    opacity: 0.5;
+}
+
+/* 中央のロゴ */
+.header-logo img {
+    width: 100px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   Main Visual
+========================= */
+
+.main-visual {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.main-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%)
+}
+
+
+/* =========================
+   Section 共通設定
+========================= */
+
+.section-anchor {
+    scroll-margin-top: 100px;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   Concept
+========================= */
+
+.concept {
+    display: grid;
+
+    /* 画像と文章を横並びにする */
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+    gap: 9.5%;
+
+    margin-top: 200px;
+}
+
+.concept-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.concept-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%)
+}
+
+.concept-content {
+    padding-right: 13%;
+}
+
+.concept-content .section-title {
+    margin-bottom: 50px;
+}
+
+.concept-text {
+    font-size: 17px;
+    line-height: 2.1;
+    letter-spacing: 0.02em;
+    font-weight: 350;
+}
+
+.concept-text p {
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   Menu
+========================= */
+
+.menu {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 200px auto 0;
+    padding: 0 15px;
+}
+
+.menu>.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* メニューを2列に配置 */
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 45px;
+    row-gap: 42px;
+}
+
+.menu-category h3 {
+    font-size: 20px;
+
+    border-bottom: 1px solid #888;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
+
+.menu-category ul {
+    list-style: none;
+}
+
+.menu-category li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 17px;
+    line-height: 2.3;
+    letter-spacing: 0.01em;
+    font-weight: 350;
+}
+
+
+/* =========================
+   Access
+========================= */
+
+.access {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 200px 200px;
+    margin-bottom: 40px;
+
+    display: grid;
+
+    /* 地図を大きく、店舗情報を小さく */
+    grid-template-columns: 2.8fr 1fr;
+
+    align-items: center;
+    gap: 3%;
+}
+
+.access-map {
+    width: 90%;
+    height: 600px;
+    overflow: hidden;
+    filter: grayscale(100%)
+}
+
+.access-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.access-content {
+    width: 100%;
+}
+
+.access-content .section-title {
+    margin-bottom: 40px;
+}
+
+.address {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    font-weight: 350;
+}
+
+.shop-info {
+    font-size: 17px;
+    line-height: 2.5;
+    font-weight: 350;
+}
+
+.shop-info p {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+}
+
+/* Instagram */
+.instagram-link {
+    display: inline-block;
+    margin-top: 22px;
+}
+
+.instagram-link img {
+    width: 35px;
+    object-fit: contain;
+
+    transition: opacity 0.3s;
+}
+
+.instagram-link:hover img {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    text-align: center;
+    padding: 50px 15px 25px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+}
+
+/* =========================
+   Scroll Animation
+========================= */
+
+/* アニメーション前の状態 */
+.fade-up {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+/* 画面内に入ったときの状態 */
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 動きを減らす設定が有効な場合 */
+@media (prefers-reduced-motion: reduce) {
+    .fade-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ローディング画面 */
+#loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.loader-content {
+    text-align: center;
+    width: 220px;
+    animation: fadeIn 1.2s ease;
+}
+
+.loader-content img {
+    display: block;
+    width: 150px;
+    margin: 0 auto 25px;
+}
+
+.loader-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    margin-bottom: 20px;
+}
+
+.loader-line {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.loader-line span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transform: translateX(-100%);
+    animation: loading 1.8s ease forwards;
+}
+
+#loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes loading {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 画像のホバーアニメーション */
+/*.main-visual img,
+.concept img {
+    transition: transform 0.5s ease;
+}
+
+.main-visual img:hover,
+.concept img:hover {
+    transform: scale(1.03);
+}*/
+
+.main-visual img,
+.concept img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.main-visual img:hover,
+.concept img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.2);
+}
+
+@media (hover: none) {
+
+    .main-visual img:hover,
+    .concept img:hover {
+        transform: none;
+        filter: none;
+    }
+}
+
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media screen and (max-width: 1024px) {
+
+    /* Header */
+    .header {
+        height: 100px;
+    }
+
+    .header-nav {
+        gap: 20px;
+    }
+
+    .header-nav a {
+        font-size: 17px;
+    }
+
+    .header-logo img {
+        width: 105px;
+    }
+
+
+    /* Main Visual */
+    .main-visual {
+        width: 88%;
+        margin: 40px auto;
+    }
+
+
+    /* Concept */
+    .concept {
+        grid-template-columns: 1fr 1fr;
+        gap: 5%;
+        margin-top: 150px;
+    }
+
+    .concept-content {
+        padding-right: 8%;
+    }
+
+    .concept-content .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .concept-text {
+        font-size: 14px;
+    }
+
+
+    /* Menu */
+    .menu {
+        width: 75%;
+        margin-top: 150px;
+    }
+
+    .menu-container {
+        column-gap: 30px;
+        row-gap: 35px;
+    }
+
+    .menu-category h3 {
+        font-size: 17px;
+    }
+
+    .menu-category li {
+        font-size: 14px;
+    }
+
+
+    /* Access */
+    .access {
+        width: 90%;
+        margin: 150px auto 40px;
+        grid-template-columns: 2fr 1fr;
+        gap: 4%;
+    }
+
+    .access-map {
+        width: 100%;
+        height: 400px;
+    }
+
+    .access-content .section-title {
+        margin-bottom: 25px;
+    }
+
+    .address,
+    .shop-info {
+        font-size: 13px;
+    }
+
+    .instagram-link img {
+        width: 30px;
+    }
+    .loader-content {
+        width: 200px;
+    }
+    
+    .loader-content img {
+        width: 140px;
+    }
+
+}
+
+/* =========================
+   Smartphone
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    /* Header */
+    .header {
+        height: 75px;
+        padding: 0 3%;
+    }
+
+    .header-nav {
+        left: 3%;
+        gap: 10px;
+    }
+
+    .header-nav a {
+        font-size: 10px;
+    }
+
+    .header-logo img {
+        width: 70px;
+    }
+
+
+    /* Main Visual */
+    .main-visual {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+
+    /* Section Title */
+    .section-title {
+        font-size: 27px;
+        margin-bottom: 30px;
+    }
+
+
+    /* Concept */
+    .concept {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        margin-top: 100px;
+    }
+
+    .concept-image {
+        width: 100%;
+        height: 260px;
+    }
+
+    .concept-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .concept-content {
+        width: 85%;
+        padding: 0;
+    }
+
+    .concept-content .section-title {
+        margin-bottom: 25px;
+    }
+
+    .concept-text {
+        font-size: 12px;
+        line-height: 2.1;
+    }
+
+
+    /* Menu */
+    .menu {
+        width: 85%;
+        margin: 110px auto 0;
+        padding: 0;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+        row-gap: 35px;
+    }
+
+    .menu-category h3 {
+        font-size: 16px;
+    }
+
+    .menu-category li {
+        font-size: 13px;
+        line-height: 2.5;
+    }
+
+
+    /* Access */
+    .access {
+        width: 85%;
+        margin: 110px auto 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+    }
+
+    .access-map {
+        width: 100%;
+        height: 300px;
+    }
+
+    .access-content {
+        width: 100%;
+    }
+
+    .access-content .section-title {
+        margin-bottom: 25px;
+    }
+
+    .address,
+    .shop-info {
+        font-size: 12px;
+    }
+
+    .shop-info p {
+        grid-template-columns: 70px 1fr;
+    }
+
+    .instagram-link {
+        margin-top: 20px;
+    }
+
+    .instagram-link img {
+        width: 28px;
+    }
+
+
+    /* Footer */
+    .footer {
+        padding: 40px 15px 20px;
+        font-size: 11px;
+    }
+
+    .loader-content {
+        width: 170px;
+    }
+    
+    .loader-content img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+    
+    .loader-content p {
+        font-size: 9px;
+    }
+
+}
+
+/* =========================
+   Small Smartphone
+========================= */
+
+@media screen and (max-width: 380px) {
+
+    /* Header */
+    .header {
+        height: 65px;
+    }
+
+    .header-nav {
+        gap: 7px;
+    }
+
+    .header-nav a {
+        font-size: 9px;
+    }
+
+    .header-logo img {
+        width: 58px;
+    }
+
+
+    /* Main Visual */
+    .main-visual {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+
+    /* Concept */
+    .concept {
+        margin-top: 80px;
+    }
+
+    .concept-image {
+        height: 210px;
+    }
+
+    .concept-content {
+        width: 88%;
+    }
+
+    .concept-text {
+        font-size: 11px;
+    }
+
+
+    /* Menu */
+    .menu {
+        width: 88%;
+        margin-top: 90px;
+    }
+
+    .menu-category h3 {
+        font-size: 14px;
+    }
+
+    .menu-category li {
+        font-size: 11px;
+    }
+
+
+    /* Access */
+    .access {
+        width: 88%;
+        margin-top: 90px;
+    }
+
+    .access-map {
+        height: 230px;
+    }
+
+    .address,
+    .shop-info {
+        font-size: 11px;
+    }
+
+    .loader-content {
+        width: 150px;
+    }
+    
+    .loader-content img {
+        width: 110px;
+    }
+
+}
