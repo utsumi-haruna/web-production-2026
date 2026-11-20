@@ -2,7 +2,7 @@
 
 HTML / CSS を用いたWebサイト制作
 
-[完成したサイト](https://click.ecc.ac.jp/ecc/utsumi_haruna/)
+[完成したサイト](https://click.ecc.ac.jp/ecc/utsumi_haruna/web-production-2026/)
 
 ## 企画
 
