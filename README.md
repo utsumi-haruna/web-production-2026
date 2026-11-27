@@ -1,6 +1,6 @@
 # web-production-2026
 
-HTML / CSS を用いたWebサイト制作
+HTML / CSS / JavaScript を用いたWebサイト制作
 
 [完成したサイト](https://click.ecc.ac.jp/ecc/utsumi_haruna/web-production-2026/)
 
@@ -23,19 +23,3 @@ HTML / CSS を用いたWebサイト制作
 3. 画像を探し、細部までデザインする
 4. コーディング
 5. 動作確認・修正
-
-### 必要な情報を整理
-
-ヘッダー
-
-- ロゴ
-- 見出しに飛べるボタン
-
-メイン
-
-- 大きいイメージ
-- Concept (店の思い)
-- Menu (料金)
-- Access (住所、営業時間、休業日、Tell、map)
-
-フッター
